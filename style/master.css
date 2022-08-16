@@ -76,7 +76,7 @@ footer {
 
 
 /* Tablets/mid screen */
-@media screen and (max-width: 1120px) and (min-width: 769px) {
+@media screen and (max-width: 1120px) and (min-width: 950px) {
     header {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
@@ -97,7 +97,7 @@ footer {
 }
 
 /* Mobile/small screens */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 949px) {
     header {
         padding: 20px 0;
         grid-template-columns: 1fr min-content;
