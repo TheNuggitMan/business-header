@@ -5,7 +5,7 @@ box-sizing: border-box;
 font-size: 10px;
 }
 
-.burgerMenu {
+.burgerMenuIcon {
     display: none;
 }
 
@@ -22,7 +22,7 @@ header {
     width: 300px;
 }
 
-.heroTag, li {
+.heroTag, a, .closeBtn {
     font-family: 'Poppins', sans-serif;
     font-size: 1.5rem;
 }
@@ -34,10 +34,6 @@ header {
 a {
     text-decoration: none;
     color: white;
-}
-
-a:first-child {
-    color: MediumTurquoise;
 }
 
 ul {
@@ -57,13 +53,17 @@ li.contact{
     font-weight: 800;
 }
 
-li:visited {
+a:visited {
     color: white;
 }
 
-li:hover, li:active {
+a:hover, a:active {
     color: MediumTurquoise;
     cursor: pointer;
+}
+
+.active > a {
+    color: MediumTurquoise;
 }
 
 main {
@@ -73,7 +73,6 @@ main {
 footer {
     text-align: center;
 }
-
 
 /* Tablets/mid screen */
 @media screen and (max-width: 1120px) and (min-width: 801px) {
@@ -113,13 +112,38 @@ footer {
         display: none;
     }
 
-    .burgerMenu {
+    ul {
+        display: grid;
+        grid-template-columns: max-content;
+        grid-template-rows: min-content repeat(4, 60px);
+        place-items: center;
+    }
+
+    .burgerNav {
+        display: block;
+        transition:.5s;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-color: #333;
+    }
+
+    ul > .closeBtn {
+        display: inline !important;
+        color: #888;
+        margin: 20px 0;
+        cursor: pointer;
+        font-size: 2rem;
+        border-bottom: 1px dashed #888;
+    }
+
+    .burgerMenuIcon {
         display: block;
         cursor: pointer;
         margin-right: 5px;
     }
 
-    .burgerMenu > div {
+    .burgerMenuIcon > div {
         background-color: white;
         height: 3px;
         width: 30px;
@@ -134,7 +158,7 @@ footer {
         padding-bottom: 0px;
     }
 
-    .burgerMenu {
+    .burgerMenuIcon {
         grid-row: 3 / 3;
         margin: 0;
     }
