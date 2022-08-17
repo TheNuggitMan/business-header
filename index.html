@@ -9,21 +9,21 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,800;1,200&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     </head>
     <body>
         <header>
             <img class="heroImg" src="img/logo.png" alt="hero Image" />
             <h1 class="heroTag">The right business at the right time</h1>
-            <nav>
+            <nav id="burger">
                 <ul>
-                    <a href="" title="Home"><li>Home</li></a>
-                    <a href="" title="About Us"><li>About Us</li></a>
-                    <a href="" title="Meet The Team"><li>Meet The Team</li></a>
-                    <a href="" title="Contact Us"><li class="contact">Contact Us</li></a>
+                    <span class="closeBtn" onclick="getElementById('burger').classList.toggle('burgerNav')" style="display:none">Close</span>
+                    <li class="active"><a href="" title="Home">Home</a></li>
+                    <li><a href="" title="About Us">About Us</a></li>
+                    <li><a href="" title="Meet The Team">Meet The Team</a></li>
+                    <li class="contact"><a href="" title="Contact Us">Contact Us</a></li>
                 </ul>
             </nav>
-            <div class="burgerMenu">
+            <div class="burgerMenuIcon" onclick="getElementById('burger').classList.toggle('burgerNav')">
                 <div>
                 </div>
                 <div>
